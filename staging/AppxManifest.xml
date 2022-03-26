@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
-  <Identity Name="30492SamuelGomes.FasttrackerII" Version="1.52.0.0" Publisher="CN=81CFCF59-AA2B-4985-97BF-4E6A6C36B7D6" ProcessorArchitecture="x64" />
+  <Identity Name="30492SamuelGomes.MilkyTracker" Version="1.3.0.0" Publisher="CN=81CFCF59-AA2B-4985-97BF-4E6A6C36B7D6" ProcessorArchitecture="x64" />
   <Properties>
-    <DisplayName>Fasttracker II</DisplayName>
+    <DisplayName>MilkyTracker</DisplayName>
     <PublisherDisplayName>Samuel Gomes</PublisherDisplayName>
-    <Description>Fasttracker II clone for Windows aims to be a highly accurate clone of the classic Fasttracker II software for MS-DOS. The XM player itself has been directly ported from the original source code, for maximum accuracy.</Description>
-    <Logo>Assets\ft2-clone50x50.png</Logo>
+    <Description>MilkyTracker is an open source, multi-platform music application for creating .MOD and .XM module files. It attempts to recreate the module replay and user experience of the popular DOS program Fasttracker II, with special playback modes available for improved Amiga ProTracker 2/3 compatibility.</Description>
+    <Logo>Assets\MilkyTracker50x50.png</Logo>
   </Properties>
   <Resources>
     <Resource Language="en-us" />
@@ -17,25 +17,43 @@
     <rescap:Capability Name="runFullTrust" />
   </Capabilities>
   <Applications>
-    <Application Id="FasttrackerII" Executable="ft2-clone-win64.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="Fasttracker II" Description="Fasttracker II clone for Windows aims to be a highly accurate clone of the classic Fasttracker II software for MS-DOS. The XM player itself has been directly ported from the original source code, for maximum accuracy." Square150x150Logo="Assets\ft2-clone150x150.png" Square44x44Logo="Assets\ft2-clone44x44.png" BackgroundColor="transparent" />
+    <Application Id="MilkyTracker" Executable="MilkyTracker.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="MilkyTracker" Description="MilkyTracker is an open source, multi-platform music application for creating .MOD and .XM module files. It attempts to recreate the module replay and user experience of the popular DOS program Fasttracker II, with special playback modes available for improved Amiga ProTracker 2/3 compatibility." Square150x150Logo="Assets\MilkyTracker150x150.png" Square44x44Logo="Assets\MilkyTracker44x44.png" BackgroundColor="transparent" />
       <Extensions>
-        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="ft2-clone-win64.exe">
-          <uap:FileTypeAssociation Name=".fst">
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="MilkyTracker.exe">
+          <uap:FileTypeAssociation Name=".669">
             <uap:DisplayName>Tracker Music File</uap:DisplayName>
             <uap:Logo>Assets\ext.png</uap:Logo>
             <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false" />
             <uap:SupportedFileTypes>
-              <uap:FileType>.fst</uap:FileType>
-              <uap:FileType>.nst</uap:FileType>
-              <uap:FileType>.stk</uap:FileType>
-              <uap:FileType>.m15</uap:FileType>
-              <uap:FileType>.stm</uap:FileType>
+              <uap:FileType>.669</uap:FileType>
+              <uap:FileType>.amf</uap:FileType>
+              <uap:FileType>.ams</uap:FileType>
+              <uap:FileType>.cba</uap:FileType>
+              <uap:FileType>.dbm</uap:FileType>
               <uap:FileType>.digi</uap:FileType>
+              <uap:FileType>.dsm</uap:FileType>
+              <uap:FileType>.dtm</uap:FileType>
+              <uap:FileType>.far</uap:FileType>
+              <uap:FileType>.gdm</uap:FileType>
+              <uap:FileType>.gmc</uap:FileType>
+              <uap:FileType>.imf</uap:FileType>
+              <uap:FileType>.mdl</uap:FileType>
+              <uap:FileType>.mtm</uap:FileType>
+              <uap:FileType>.mxm</uap:FileType>
+              <uap:FileType>.okt</uap:FileType>
+              <uap:FileType>.plm</uap:FileType>
+              <uap:FileType>.psm</uap:FileType>
+              <uap:FileType>.ptm</uap:FileType>
+              <uap:FileType>.sfx</uap:FileType>
+              <uap:FileType>.stm</uap:FileType>
+              <uap:FileType>.ult</uap:FileType>
+              <uap:FileType>.umx</uap:FileType>
+              <uap:FileType>.uni</uap:FileType>
             </uap:SupportedFileTypes>
           </uap:FileTypeAssociation>
         </uap:Extension>
-        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="ft2-clone-win64.exe">
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="MilkyTracker.exe">
           <uap:FileTypeAssociation Name=".mod">
             <uap:DisplayName>ProTracker File</uap:DisplayName>
             <uap:Logo>Assets\mod.png</uap:Logo>
@@ -45,7 +63,7 @@
             </uap:SupportedFileTypes>
           </uap:FileTypeAssociation>
         </uap:Extension>
-        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="ft2-clone-win64.exe">
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="MilkyTracker.exe">
           <uap:FileTypeAssociation Name=".s3m">
             <uap:DisplayName>ScreamTracker 3 File</uap:DisplayName>
             <uap:Logo>Assets\s3m.png</uap:Logo>
@@ -55,7 +73,17 @@
             </uap:SupportedFileTypes>
           </uap:FileTypeAssociation>
         </uap:Extension>
-        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="ft2-clone-win64.exe">
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="MilkyTracker.exe">
+          <uap:FileTypeAssociation Name=".it">
+            <uap:DisplayName>Impulse Tracker File</uap:DisplayName>
+            <uap:Logo>Assets\it.png</uap:Logo>
+            <uap:EditFlags AlwaysUnsafe="false" OpenIsSafe="false" />
+            <uap:SupportedFileTypes>
+              <uap:FileType>.it</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation" EntryPoint="Windows.FullTrustApplication" Executable="MilkyTracker.exe">
           <uap:FileTypeAssociation Name=".xm">
             <uap:DisplayName>Fasttracker 2 File</uap:DisplayName>
             <uap:Logo>Assets\xm.png</uap:Logo>
@@ -65,9 +93,9 @@
             </uap:SupportedFileTypes>
           </uap:FileTypeAssociation>
         </uap:Extension>
-        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="ft2-clone-win64.exe">
+        <uap5:Extension Category="windows.appExecutionAlias" EntryPoint="Windows.FullTrustApplication" Executable="MilkyTracker.exe">
           <uap5:AppExecutionAlias>
-            <uap5:ExecutionAlias Alias="ft2.exe" />
+            <uap5:ExecutionAlias Alias="MilkyTracker.exe" />
           </uap5:AppExecutionAlias>
         </uap5:Extension>
       </Extensions>
